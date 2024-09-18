@@ -1,7 +1,7 @@
 header img.logo {
     text-align: center;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
   }
   /* Define altura mínima da página e usa Flexbox para estruturar o layout */
 html, body {
@@ -56,7 +56,7 @@ nav ul li a:hover {
 
   body {
     text-align: center;
-    background-color:bisque;
+    background-color:aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Coloca o footer no final */

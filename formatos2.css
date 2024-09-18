@@ -1,0 +1,89 @@
+/* Estilizando o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Menu de navegação com Flexbox */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around; /* Distribui os itens de forma equitativa */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Cabeçalho com Flexbox */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:cadetblue; 
+    /* background-color: #4CAF50; */
+    padding: 20px;
+    color: white;
+}
+
+header img.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+/* Estilo para garantir a responsividade em telas menores */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Conteúdo principal com flexbox */
+main {
+    flex: 1; /* O conteúdo principal cresce para ocupar o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+/* Rodapé fixo */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
