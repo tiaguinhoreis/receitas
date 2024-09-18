@@ -10,9 +10,49 @@ html, body {
     margin: 0;
     padding: 0;
   }
-  nav {
-   text-align:left;
-  }
+/* Estilo básico para o menu */
+nav {
+    background-color: #333;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; /* Distribui o menu em colunas */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1 1 150px; /* Controla o tamanho mínimo de cada item */
+    text-align: center;
+    margin: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Efeito ao passar o mouse */
+}
+
+/* Estilo para garantir a responsividade em telas menores */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
   body {
     text-align: center;
