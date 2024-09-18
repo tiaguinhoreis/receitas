@@ -18,7 +18,6 @@ nav ul {
     display: flex;
     justify-content: flex-start; /* Distribui os itens de forma equitativa */
     flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
-
 }
 
 nav ul li {

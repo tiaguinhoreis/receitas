@@ -1,72 +1,88 @@
-header img.logo {
-    text-align: center;
-    width: 50px;
-    height: 50px;
-  }
-  /* Define altura mínima da página e usa Flexbox para estruturar o layout */
-html, body {
-
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-/* Estilo básico para o menu */
-nav {
-    background-color: #333;
-    padding: 15px;
+/* Estilizando o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Menu de navegação com Flexbox */
 nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around; /* Distribui o menu em colunas */
-    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  display: flex;
+  justify-content: flex-start; /* Distribui os itens de forma equitativa */
+  flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
 }
 
 nav ul li {
-    flex: 1 1 150px; /* Controla o tamanho mínimo de cada item */
-    text-align: center;
-    margin: 5px;
+  margin: 0;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    padding: 10px;
-    background-color: #444;
-    border-radius: 5px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-    background-color: #555; /* Efeito ao passar o mouse */
+  background-color: #111;
 }
 
+/* Cabeçalho com Flexbox */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:cadetblue; 
+  /* background-color: #4CAF50; */
+  padding: 20px;
+  color: white;
+}
+
+header img.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
 /* Estilo para garantir a responsividade em telas menores */
 @media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
+/* Conteúdo principal com flexbox */
+main {
+  flex: 1; /* O conteúdo principal cresce para ocupar o espaço restante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
 
-  body {
-    text-align: center;
-    background-color:aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Coloca o footer no final */
-  }
-  
-  /* Estilos do footer */
-  footer {
-    background-color: #333; /* Cor de fundo do footer */
-    color: white;           /* Cor do texto no footer */
-    text-align: center;      /* Centraliza o texto */
-    padding: 20px 0;        /* Espaçamento interno (padding) */
-    width: 100%;            /* Faz o footer ocupar toda a largura */
-  }
+/* Rodapé fixo */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
