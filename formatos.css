@@ -1,0 +1,28 @@
+header img.logo {
+    width: 80px;
+    height: 80px;
+  }
+  /* Define altura mínima da página e usa Flexbox para estruturar o layout */
+html, body {
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+   /* text-align: center;*/
+    background-color:bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Coloca o footer no final */
+  }
+  
+  /* Estilos do footer */
+  footer {
+    background-color: #333; /* Cor de fundo do footer */
+    color: white;           /* Cor do texto no footer */
+    text-align: center;      /* Centraliza o texto */
+    padding: 20px 0;        /* Espaçamento interno (padding) */
+    width: 100%;            /* Faz o footer ocupar toda a largura */
+  }
