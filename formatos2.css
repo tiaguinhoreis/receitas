@@ -16,7 +16,7 @@ nav ul {
     padding: 0;
     background-color: #333;
     display: flex;
-    justify-content: space-around; /* Distribui os itens de forma equitativa */
+    justify-content: flex-start; /* Distribui os itens de forma equitativa */
     flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
 
 }
@@ -49,8 +49,8 @@ header {
 }
 
 header img.logo {
-    width: 100px;
-    height: auto;
+    width: 50px;
+    height: 50px;
     margin-right: 15px;
 }
 
