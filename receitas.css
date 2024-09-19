@@ -29,3 +29,23 @@
     color: #555;
     font-size: 16px;
 }
+       /* Lista não ordenada */
+.block ul {
+    list-style-type: disc; /* Estilo dos pontinhos */
+    list-style-position: outside; /* O marcador fica fora da caixa de conteúdo */ 
+    padding-left: 50px; /* Controla o espaço total da lista a partir da esquerda */
+    border-bottom: 3px solid #333; /* Linha abaixo da lista */
+    margin-bottom: 10px; /* Espaço entre a lista e o próximo elemento */
+
+    }
+
+    /* Itens da lista */
+ .block li {
+        text-align: left;
+        text-indent: 5px; /* Ajusta a distância entre o marcador e o texto */
+        padding: 3px;
+    }
+.block h4 {
+    text-align: justify;
+    padding: 5px;
+}
