@@ -70,7 +70,7 @@ main {
   flex: 1; /* O conteúdo principal cresce para ocupar o espaço restante */
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 20px;
   background-color: white;
   text-align: center;
