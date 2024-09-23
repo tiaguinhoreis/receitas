@@ -1,8 +1,8 @@
 /* Estilizando o corpo da página */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
@@ -25,9 +25,9 @@ nav ul li {
 }
 
 nav ul li a {
-  display: block;
+  display: flex;
   color: white;
-  text-align: center;
+  text-align:center;
   padding: 14px 20px;
   text-decoration: none;
 }
@@ -38,27 +38,21 @@ nav ul li a:hover {
 
 /* Cabeçalho com Flexbox */
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color:cadetblue; 
-  /* background-color: #4CAF50; */
-  padding: 20px;
+  display:flex;
+  justify-content:left;
+  align-items:flex-start;
+  background-color: #333; 
+  padding: 5px;
   color: white;
 }
 
-header img.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 15px;
-}
 
-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
+
 /* Estilo para garantir a responsividade em telas menores */
 @media (max-width: 600px) {
+  header {
+    justify-content: center; /* Centraliza os itens */
+}
   nav ul {
       flex-direction: column;
       align-items: center;
@@ -68,20 +62,27 @@ header h1 {
 /* Conteúdo principal com flexbox */
 main {
   flex: 1; /* O conteúdo principal cresce para ocupar o espaço restante */
-  display: flex;
+  display:flex;
   justify-content: center;
-  /* align-items: center; */
-  padding: 20px;
+  align-items: center; 
+  padding: 5px;
   background-color: white;
   text-align: center;
 }
-
+main img.logo {
+  width: 50px;
+  height: 50px;
+}
+main h1 {
+  font-size: 2.5rem;
+  margin: 0px;
+}
 /* Rodapé fixo */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   position: relative;
   bottom: 0;
   width: 100%;
