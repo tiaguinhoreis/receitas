@@ -9,15 +9,17 @@ body {
   min-height: 100vh;
 }
 
-/* Menu de navegação com Flexbox */
+
+/*
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: #333;
   display: flex;
-  justify-content: flex-start; /* Distribui os itens de forma equitativa */
-  flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  
 }
 
 nav ul li {
@@ -27,7 +29,7 @@ nav ul li {
 nav ul li a {
   display: flex;
   color: white;
-  text-align:center;
+  text-align: center;
   padding: 14px 20px;
   text-decoration: none;
 }
@@ -36,47 +38,52 @@ nav ul li a:hover {
   background-color: #111;
 }
 
-/* Cabeçalho com Flexbox */
 header {
-  display:flex;
-  justify-content:left;
-  align-items:flex-start;
-  background-color: #333; 
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  background-color: #333;
   padding: 5px;
-  color: white;
+  color: red;
 }
-
+*/
 
 
 /* Estilo para garantir a responsividade em telas menores */
 @media (max-width: 600px) {
   header {
-    justify-content: center; /* Centraliza os itens */
-}
+    justify-content: center;
+    /* Centraliza os itens */
+  }
+
   nav ul {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 /* Conteúdo principal com flexbox */
 main {
-  flex: 1; /* O conteúdo principal cresce para ocupar o espaço restante */
-  display:flex;
+  flex: 1;
+  /* O conteúdo principal cresce para ocupar o espaço restante */
+  display: flex;
   justify-content: center;
-  align-items: center; 
-  padding: 5px;
-  background-color: white;
+  align-items: center;
+  padding: 0px;
+  background-color: green;
   text-align: center;
 }
+
 main img.logo {
   width: 50px;
   height: 50px;
 }
+
 main h1 {
   font-size: 2.5rem;
   margin: 0px;
 }
+
 /* Rodapé fixo */
 footer {
   background-color: #333;
