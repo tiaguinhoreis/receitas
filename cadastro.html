@@ -4,103 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="formatos.css"> <!-- Link para o CSS externo --> 
+   <link rel="stylesheet" href="formatos.css"> <!-- Link para o CSS externo --> 
     <!-- Inclusão do Bootstrap via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
-            background-color: #f8f9fa; /* Cor de fundo do corpo */
-
+         /*   background-color: #f8f9fa; /* Cor de fundo do corpo */
+            background-color:white ;
         }
+       
         .form-label {
             width: 100px; /* Define a largura fixa para o label */
         }
-        main{
-            background-color:rgb(230, 153, 10); 
+        main  {
+            background-color:rosybrown;
+           
         }
     </style>
 </head>
 <body>
     <!-- Cabeçalho com logo e título -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">  <!-- Menu de Navegação -->
-            <div class="container-fluid"> 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                    <!-- Usar lista para organizar os links -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="cadastro.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cadastro.html">RECEITAS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="cadastro.html">CADASTRO</a>
-                        </li>
-                    </ul>
-            </div>
-            </div>
-            <!-- 
-                <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="receitas.html">RECEITAS</a></li>
-                <li><a href="cadastro.html">CADASTRO</a></li>
-            </ul>
-            -->
-        </nav>
-    </header>
+            <!-- Cabeçalho com logo e título -->
+            <header>
+                <nav class="navbar navbar-expand-lg custom-navbar ">  <!-- Menu de Navegação -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                        <div class="container-fluid"> 
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                            <!-- Usar lista para organizar os links -->
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="receitas.html">Receitas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="cadastro.html">Cadastro</a>
+                                </li>
+                            </ul>
+                    </div>
+                    </div>
+                </nav>
+            </header>
     <!-- Área principal -->
     <main class="container-fluid py-5">
         <div class="container">
-            <h1 class="text-center mb-4">Efetue seu Cadastro</h1>
+            <h1 class="text-start mb-4">Efetue seu Cadastro</h1>
             <form action="mailto:tiagofdr@hotmail.com" method="post" enctype="text/plain">
+                
                 <div class="row mb-3">
-                    <div class="col-md-6" d-flex align-items-baseline >
+                    <div class="col-md-1" d-flex align-items-start >
                         <label for="nome" class="form-label">Nome</label>
+                    </div>
+                    <div class="col-md-8" d-flex align-items-baseline >
                         <input type="text" class="form-control" id="nome" name="nome" required>
                     </div>
-                    <div class="col-md-6" d-flex align-items-center>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-1" d-flex align-items-start >
                         <label for="email" class="form-label">E-mail</label>
+                    </div>
+                    <div class="col-md-8" d-flex align-items-baseline>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-md-8">
-                        <label for="rua" class="form-label">Rua</label>
-                        <input type="text" class="form-control" id="rua" name="rua" required>
+                    <div class="col-md-1" d-flex align-items-start >
+                        <label for="cep" class="form-label">CEP</label>
                     </div>
-                    <div class="col-md-4">
-                        <label for="numero" class="form-label">Número</label>
-                        <input type="text" class="form-control" id="numero" name="numero" required>
+                    <div class="col-md-3" d-flex align-items-baseline>
+                        <input type="text" class="form-control" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="XX.XXX-XXX" required>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-md-12">
+                    <div class="col-md-1" d-flex align-items-start >
+                        <label for="rua" class="form-label">Rua</label>
+                    </div>
+                    <div class="col-md-8" d-flex align-items-start >
+                        <input type="text" class="form-control" id="rua" name="rua" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-1" d-flex align-items-start >
+                        <label for="numero" class="form-label">Nº</label>
+                        
+                    </div>
+                    <div class="col-md-2" d-flex align-items-start >
+                        <input type="text" class="form-control" id="numero" name="numero" required>
+                    </div>
+                    <div class="col-md-2">
                         <label for="complemento" class="form-label">Complemento</label>
+
+                    </div>
+                    <div class="col-md-4">
                         <input type="text" class="form-control" id="complemento" name="complemento" required>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-md-6">
+                    <div class="col-md-1">
                         <label for="cidade" class="form-label">Cidade</label>
+                    </div>
+                    <div class="col-md-6">
                         <input type="text" class="form-control" id="cidade" name="cidade" required>
                     </div>
-                    <div class="col-md-4">
-                        <label for="estado" class="form-label">Estado</label>
-                        <select id="estado" class="form-select" name="estado" required>
-                            <option value="" selected disabled>Selecione...</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="MG">Minas Gerais</option>
-                            <!-- Adicione outros estados conforme necessário -->
-                        </select>
+                    <div class="col-md-1">
+                        <label for="estado" class="form-label">UF</label>
                     </div>
-                    <div class="col-md-2">
-                        <label for="cep" class="form-label">CEP</label>
-                        <input type="text" class="form-control" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="XXXXX-XXX" required>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control"  id="estado" name="estado" required>
+                    </div>  
+                    <div class="col-md-3">    
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </div>
+                    </input>
+                    </div>
+                    
                 </div>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                
             </form>
         </div>
     </main>
@@ -111,7 +136,7 @@
 </body>
      <!-- Rodapé com direitos autorais -->
      <footer>
-        <p>&copy;  2024 Tiaguinho Cook. Todos os direitos reservados.</p> 
+        <p>&copy; 2024 Tiaguinho Chef.</p> 
     </footer>
 
 </html>

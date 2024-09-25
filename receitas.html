@@ -3,81 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas</title>
+    <title>RECEITAS</title>
     <link rel="stylesheet" href="formatos.css"> <!-- Link para o CSS externo -->
     <link rel="stylesheet" href="receitas.css"> <!-- Link para o CSS externo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <!-- Cabeçalho com logo e título -->
     <header>
-        <nav>  <!-- Menu de Navegação -->
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="receitas.html">RECEITAS</a></li>
-                <li><a href="cadastro.html">CADASTRO</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg custom-navbar">  <!-- Menu de Navegação -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container-fluid"> 
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="receitas.html">Receitas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+
     <!-- Conteúdo Principal -->
     <main>
-        <div class="container">
+        <div class="container mt-4 d-flex flex-wrap">
             <!-- Bloco 1 -->
-            <div class="block">
-                <p>Arroz com Brocolis</p>
-                <img src="Arroz_Brocolis.jpg" alt="Arroz com Brocolis"  >
-                <ul>
-                    <li>Arroz Refogado</li>
-                    <li>Brócolis Fresco</li>
-                    <li>Alho Picado Filhete</li>
-                    <li>Azeite</li>
-                    <li>Sal a Gosto</li>
-                </ul>
-                <h4>Cozinhe o brócolis na água com sal até que o talo fique macio. Escorra e reserve.
-                Em uma panela frite o alho no azeite até dourar, Junte o brócolis e refogue. Misture o arroz cozido até que fique uniforme</h4>
+            <div class="card m-2" style="width: 200px;">
+                <img src="Arroz_Brocolis.jpg" alt="Arroz com Brócolis" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Arroz com Brócolis</h5>
+                    <h6>Ingredientes:</h6>
+                    <p class="card-text">
+                        <ul>
+                            <li>Arroz Refogado</li>
+                            <li>Brócolis Fresco</li>
+                            <li>Alho Picado</li>
+                            <li>Azeite</li>
+                            <li>Sal a Gosto</li>
+                        </ul>
+                    </p>
+                    <hr>
+                    <h6>Preparo:</h6>
+                    <p class="card-text">Cozinhe o brócolis na água com sal até que o talo fique macio. Escorra e reserve. Em uma panela, frite o alho no azeite até dourar. Junte o brócolis e refogue. Misture o arroz cozido até que fique uniforme.</p>
+                </div>
             </div>
+
             <!-- Bloco 2 -->
-            <div class="block">
-                <p>Torta de Sardinha</p>
-                <img src="torta_sardinha.jpeg" alt="Torta de Sardinha" >
-                <ul>
-                    <li>Farinha de Trigo</li>
-                    <li>ovos</li>
-                    <li>xícara de leite</li>
-                    <li>fermento em pó </li>
-                    <li>cebola, tometes picados</li>
-                    <li>milho verde</li>
-                    <li>sardinhas picadas</li>
-                </ul>
-                <h4>No liquidificador junte os ovos, leite, o Azeite, o Queijo e bata até obter uma massa homogênea misture a Farinha 
-                    Junte o tomate, o milho verde e a ervilha. Acrescente a sardinha e misture bem. Em forma retangular untada, coloque 1 camada de massa, outra de recheio e finalize com massa
-                </h4>
+            <div class="card m-2" style="width: 200px;">
+                <img src="torta_sardinha.jpeg" alt="Torta de Sardinha" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Torta de Sardinha</h5>
+                    <h6>Ingredientes:</h6>
+                    <p class="card-text">
+                        <ul>
+                            <li>Farinha de Trigo</li>
+                            <li>Ovos</li>
+                            <li>Xícara de Leite</li>
+                            <li>Fermento em Pó</li>
+                            <li>Cebola e Tomate</li>
+                            <li>Milho Verde</li>
+                            <li>Sardinhas Picadas</li>
+                        </ul>
+                    </p>
+                    <hr>
+                    <h6>Preparo:</h6>
+                    <p class="card-text">No liquidificador, junte os ovos, leite, azeite e bata até obter uma massa homogênea. Misture a farinha. Junte o tomate, o milho verde e a ervilha. Acrescente a sardinha e misture bem. Em forma retangular untada, coloque uma camada de massa, outra de recheio e finalize com massa.</p>
+                </div>
             </div>
+
             <!-- Bloco 3 -->
-            <div class="block">
-                <p>Espaguete a Carbonara</p>
-                <img src="espaguete_carbonara.jpg" alt="Espaguete a Carbonara" >
-                <ul>
-                    <li>espaguetti</li>
-                    <li>queijo parmesão ralado</li>
-                    <li>ovos inteiros</li>
-                    <li>bacon cortado em cubinhos</li>
-                    <li>Colheres de manteiga</li>
-                    <li>creme de leite</li>
-                </ul> 
-                <h4>Cozinhe o macarrão al dente, misture a manteiga e o azeite com um pouco de salsinha e sal até obter um creme.
-                    Bata em outra tigela, os ovos com queijo parmesão ralado, Em uma frigideira, coloque o bacon e doure em sua própria gordura
-                    Coloque o macarrão em uma travessa refratária, acrescente o creme de manteiga e a mistura de bacon e misture bem.
-                </h4>  
+            <div class="card m-2" style="width: 200px;">
+                <img src="espaguete_carbonara.jpg" alt="Espaguete à Carbonara" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Espaguete à Carbonara</h5>
+                    <h6>Ingredientes:</h6>
+                    <p class="card-text">
+                        <ul>
+                            <li>Espaguete</li>
+                            <li>Queijo Parmesão</li>
+                            <li>Ovos Inteiros</li>
+                            <li>Bacon em Cubos</li>
+                            <li>Manteiga</li>
+                            <li>Creme de Leite</li>
+                        </ul>
+                    </p>
+                    <hr>
+                    <h6>Preparo:</h6>
+                    <p class="card-text">Cozinhe o macarrão al dente. Misture a manteiga e o azeite com um pouco de salsinha e sal até obter um creme. Bata em outra tigela os ovos com queijo parmesão ralado. Em uma frigideira, coloque o bacon e doure em sua própria gordura. Coloque o macarrão em uma travessa refratária, acrescente o creme de manteiga e a mistura de bacon e misture bem.</p>
+                </div>
             </div>
-            
         </div>
     </main>
 
-
-</body>
     <!-- Rodapé com direitos autorais -->
-    <footer>
-        <p>&copy; 2024 Tiaguinho Cook. Todos os direitos reservados.</p> 
+    <footer class="text-center mt-4">
+        <p>&copy; 2024 Tiaguinho Chef.</p> 
     </footer>
+</body>
 </html>

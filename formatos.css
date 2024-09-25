@@ -1,77 +1,64 @@
 /* Estilizando o corpo da página */
 body {
   font-family: Arial, sans-serif;
-  margin: auto;
+  margin: 0;
   padding: auto;
-  background-color: #f4f4f4;
-  display: flex;
+  display:flex;
   flex-direction: column;
+  grid-template-rows: 60px calc(100vh - 100px) 25px;
   min-height: 100vh;
+  color: white ;
 }
 
-
-/*
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #333;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  
-}
-
-nav ul li {
-  margin: 0;
-}
-
-nav ul li a {
-  display: flex;
+  padding: 0px;
   color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
 }
 
-nav ul li a:hover {
-  background-color: #111;
+
+.custom-navbar {
+  background-color: #333; /* Define o fundo preto */
+
 }
 
-header {
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-  background-color: #333;
-  padding: 5px;
-  color: red;
+.custom-navbar .navbar-nav .nav-link {
+  color: #ccc ; /* Define o texto branco */
 }
-*/
+.custom-navbar .navbar-nav .nav-link.active {
+  color: white ; /* Cor do link ativo (laranja) */
+  font-weight:bold ;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+  color:black; /* Define a cor ao passar o mouse (opcional) */
+}
 
 
 /* Estilo para garantir a responsividade em telas menores */
 @media (max-width: 600px) {
-  header {
-    justify-content: center;
-    /* Centraliza os itens */
-  }
 
-  nav ul {
+  .custom-navbar .navbar-nav   {
     flex-direction: column;
     align-items: center;
   }
+  
 }
 
 /* Conteúdo principal com flexbox */
 main {
   flex: 1;
-  /* O conteúdo principal cresce para ocupar o espaço restante */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px;
-  background-color: green;
+  background-color: white;
   text-align: center;
+  overflow-y:auto;
+  height: calc(100vh - 100px);
 }
 
 main img.logo {
@@ -86,11 +73,14 @@ main h1 {
 
 /* Rodapé fixo */
 footer {
+  display: flex;
   background-color: #333;
   color: white;
-  text-align: center;
-  padding: 5px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+}
+footer p {  
+  margin: 0;
 }
